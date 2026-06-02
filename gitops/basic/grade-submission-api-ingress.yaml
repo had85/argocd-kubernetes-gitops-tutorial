@@ -5,7 +5,7 @@ metadata:
   namespace: grade-demo
 spec:
   rules:
-    - host: api.grade-submission.com
+    - host: *
       http:
         paths:
           - path: /
