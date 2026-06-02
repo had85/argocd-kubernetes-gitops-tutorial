@@ -8,7 +8,7 @@ spec:
   rules:
      - http:
         paths:
-          - path: /grades-api
+          - path: /
             pathType: Prefix
             backend:
               service:
