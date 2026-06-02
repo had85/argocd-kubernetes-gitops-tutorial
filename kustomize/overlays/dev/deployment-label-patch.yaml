@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-api
+  namespace: grade-demo
+spec:
+  selector:
+    matchLabels:
+      app: dev-grade-submission
+  template:
+    metadata:
+      labels:
+        app: dev-grade-submission
