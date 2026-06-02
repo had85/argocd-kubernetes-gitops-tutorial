@@ -4,8 +4,9 @@ metadata:
   name: grade-submission-api-ingress
   namespace: grade-demo
 spec:
+  ingressClassName: nginx
   rules:
-    -
+    - host: api.grade-submission.com
       http:
         paths:
           - path: /
