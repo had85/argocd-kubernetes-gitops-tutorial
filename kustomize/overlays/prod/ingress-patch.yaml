@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grade-submission-api-ingress
+  namespace: grade-demo
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /prod(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: grade-submission-api
+                port:
+                  number: 3000

@@ -12,3 +12,17 @@ patches:
     target:
       kind: Deployment
       name: grade-submission-api
+  - path: ingress-patch.yaml
+    target:
+      kind: Ingress
+      name: grade-submission-api-ingress
+
+  - path: deployment-label-patch.yaml
+    target:
+      kind: Deployment
+      name: grade-submission-api
+
+  - path: service-selector-patch.yaml
+    target:
+      kind: Service
+      name: grade-submission-api
