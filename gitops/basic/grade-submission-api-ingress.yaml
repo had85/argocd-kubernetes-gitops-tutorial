@@ -5,7 +5,7 @@ metadata:
   namespace: grade-demo
 spec:
   rules:
-    - host: *
+    -
       http:
         paths:
           - path: /
